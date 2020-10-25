@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: darkmagenta;
+  background-color: #f0e2c5;
 }
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: hsl(32, 100%, 50%);
 }
 
 ul {
@@ -35,6 +35,10 @@ ul {
   font-size: 2em;
 }
 
+.logo::first-letter {
+  color: rgb(127, 255, 212);
+}
+
 .list {
   display: flex;
   justify-content: center;
@@ -42,7 +46,31 @@ ul {
 }
 
 .list-item {
+  font-size: 18px;
   margin-right: 20px;
+  text-align: center;
+}
+
+.list-item__link:hover {
+  color: rgb(127, 255, 212);
+  transition: all 0.5s;
+  opacity: 1;
+}
+.list-item__link::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: aquamarine;
+  opacity: 0;
+}
+
+.list-item__link:hover::after {
+  opacity: 1;
+  transition: all 2s;
 }
 
 .list-item:last-child {
@@ -66,6 +94,7 @@ ul {
 
 .active {
   opacity: 1;
+  transition: all 1s;
 }
 
 .controls {
